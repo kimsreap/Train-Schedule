@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Schedule</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="title">
+        <h1>Train Schedule</h1>
+    </div>
+    <br>
+    <div class="Sch">Current Schedule
+        <div class="TrainSch">
+            <label>Train Name</label>
+            <label>Destination</label>
+            <label>Frequency (min)</label>
+            <label>Next Arrival</label>
+            <label>Minutes Away</label>
+        </div>
+        <div id="trainTable"></div>
+    </div>
+<br>
+<br>
+    <div class="addTrain">Add Train
+        <div id="addTable">
+            <p>
+                <div>
+                    <label for="TrainName">Train Name</label>
+                </div>
+                <div class="ipt">
+                    <input type="text" name="TrainName" id="TrainName">
+                </div>    
+            </p>
+            <p>
+                <div>
+                    <label for="Destination">Destination</label>
+                </div>
+                <div class="ipt">
+                    <input type="text" name="Destination" id="Destination">
+                </div>               
+            </p>
+            <p>
+                <div>
+                    <label for="FristTrainTime">Frist Train Time (HH:mm - military time)</label>
+                </div>
+                <div class="ipt">
+                    <input type="text" name="FirstTrainTime" id="FirstTrainTime">
+                </div>               
+            </p>
+            <p>
+                <div>
+                    <label for="Frequency">Frequency</label>
+                </div>
+                <div class="ipt">
+                    <input type="text" name="Frequency" id="Frequency">
+                </div>           
+            </p>
+            <button id="addBtn">Submit</button>
+        </div>
+
+    </div>
+    
+    
+   
+   
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

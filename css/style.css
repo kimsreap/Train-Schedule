@@ -1,0 +1,50 @@
+label {
+    margin-right: 150px;
+}
+
+.trainTable {
+    margin: 20px 0 0 100px;
+}
+
+input {
+    width: 600px;
+    height: 30px;
+    margin-left: 5%;
+}
+
+label {
+    margin-left:5%;
+    margin-right: 5%;
+}
+
+body {
+    background-color: #54a58b;
+}
+
+.title {
+    margin: 1% 5% 0 5%;
+    height: 120px;
+    color:white;
+    background-color:lightslategray;
+    text-align: center;
+    font-size: 25pt;
+    line-height: 100px;
+}
+.Sch {
+    margin: 1% 5% 0 5%;
+    background-color:lightslategray;
+    font-size: 12pt;
+}
+
+.addTrain {
+    margin: 1% 5% 0 5%;
+    background-color:lightslategray;
+    font-size: 15pt;
+    grid-template-columns:1fr 1fr 1fr 1fr; 
+}
+
+div {
+    grid-template-columns:1fr 1fr 1fr 1fr;  
+}
+
+
