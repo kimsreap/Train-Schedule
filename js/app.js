@@ -15,20 +15,20 @@ document.querySelector('#addBtn').addEventListener('click',
      e.preventDefault()
      let TrainName = document.querySelector('#TrainName').value 
      let Destination = document.querySelector('#Destination').value 
-     let FirstTrainTime = document.querySelector('#FirstTrainTime').value 
-     let Frequency = document.querySelector('#Frequency').value
-
+     let FirstTime = document.querySelector('#FirstTime').value 
+     let Freq = document.querySelector('#Freq').value
+    console.log(Destination)
       let id = db.collection('AddTrains').doc().id
         db.collection('AddTrains').doc(id).set({
              TrainName: TrainName,
              Destination: Destination,
-             FirstTrainTime: FirstTrainTime,
-             Frequency:Frequency
+             FirstTime: FirstTime,
+             Freq:Freq
          })
      document.querySelector('#TrainName').value= '',
      document.querySelector('#Destination').value= '',
-     document.querySelector('#FirstTrainTime').value= '',
-     document.querySelector('#Frequency').value= ''
+     document.querySelector('#FirstTime').value= '',
+     document.querySelector('#Freq').value= ''
      
 
      // console.log(TrainName)
@@ -40,17 +40,26 @@ document.querySelector('#addBtn').addEventListener('click',
  db.collection('AddTrains').onSnapshot(({docs}) => {
     document.querySelector('#trainTable').innerHTML=''
      docs.forEach(doc => {
+         
+        
+
+         //for each item in the row -- loop through and create the table element <td>
+         //outside of the loops-- append each row to the table body (see materialize table example)
+         console.log(doc)
          console.log(doc.data())
-         let  {TrainName, Destination, Frequency, FirstTrainTime, MinutesAway} = doc.data()         
+         //let {TrainName, Destination} = doc.data()
+
+         let  {TrainName, Destination, Freq, FirstTime, MinutesAway} = doc.data()         
          let userElem = document.createElement('div')
          userElem.innerHTML = `
-        <label>${TrainName}</label>
-        <label>${Destination}</label>
-        <label>${Frequency}</label>
-        <label>${FirstTrainTime}</label>
-        <label>${MinutesAway}</label>
+        <tr>${TrainName}</tr>
+        <tr>${Destination}</tr>
+        <tr>${moment().diff(moment(Freq), "minutes")}</tr>
+        <tr>${moment(FirstTime, "HH:mm: A")}</tr>
+        <tr>${MinutesAway}</tr>
         <hr>
          `
+        
          document.querySelector('#trainTable').append(userElem)
      })
  })

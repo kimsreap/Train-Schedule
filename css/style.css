@@ -1,50 +1,69 @@
-label {
-    margin-right: 150px;
+* {
+    margin: 0;
+    padding:0;
 }
 
-.trainTable {
-    margin: 20px 0 0 100px;
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color:lightgray;
 }
 
-input {
-    width: 600px;
+#trainTable {
+    display: grid;
+    background-color:#ebdede; 
+    margin: 1% 10% 0 7%; 
+    border: 2px solid blue; 
+    height: 500px; 
+}
+
+#AddTrain {
+    width: 1200px;
+    height: 200px;
+    background-color: #f3ede5;
+    margin: 1% 10% 0 7%;
+    border: 1px solid blue;
+}
+
+#add {
+    width: 1200px;
     height: 30px;
-    margin-left: 5%;
-}
-
-label {
-    margin-left:5%;
-    margin-right: 5%;
-}
-
-body {
-    background-color: #54a58b;
-}
-
-.title {
-    margin: 1% 5% 0 5%;
-    height: 120px;
-    color:white;
-    background-color:lightslategray;
+    background-color: #5d5df1;
+    color: white;
+    font-size: 14pt;
+    line-height: 20px;
     text-align: center;
-    font-size: 25pt;
-    line-height: 100px;
 }
-.Sch {
-    margin: 1% 5% 0 5%;
-    background-color:lightslategray;
+
+#boxDiv {
+    margin: 10px 25px 0px 25px;
+}
+
+.headTitle {
+    width:1200px;
+    height: 60px;
+    text-align: center;
+    font-size: 20pt;
+    color: #f3ede5;
+    background-color:darkgoldenrod;
+    line-height: 50px;
+    margin:1% 10% 0 7%;
+}
+
+#currTrainSch {
+    width:1200px;
     font-size: 12pt;
+    background-color: #29298b;
+    line-height: 50px;
+    margin:1% 10% 0 7%;
 }
 
-.addTrain {
-    margin: 1% 5% 0 5%;
-    background-color:lightslategray;
-    font-size: 15pt;
-    grid-template-columns:1fr 1fr 1fr 1fr; 
+tr {
+    margin-right: 50px;
 }
 
-div {
-    grid-template-columns:1fr 1fr 1fr 1fr;  
+button {
+    margin:2% 0 0 5%;
+    width: 80px;
+    height: 30px;
 }
-
-
