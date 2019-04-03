@@ -40,11 +40,6 @@ document.querySelector('#addBtn').addEventListener('click',
  db.collection('AddTrains').onSnapshot(({docs}) => {
     document.querySelector('#trainTable').innerHTML=''
      docs.forEach(doc => {
-         
-        
-
-         //for each item in the row -- loop through and create the table element <td>
-         //outside of the loops-- append each row to the table body (see materialize table example)
          console.log(doc)
          console.log(doc.data())
          //let {TrainName, Destination} = doc.data()
